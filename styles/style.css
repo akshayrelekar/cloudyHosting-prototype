@@ -186,6 +186,10 @@ p {
   text-align: center;
 }
 
+.languages .flex {
+  flex-wrap: wrap;
+}
+
 .languages .card {
   margin: 18px 10px 40px;
 }
@@ -195,6 +199,17 @@ p {
   transition: transform 330ms ease-in-out;
 }
 
-.languages h4 {
+.languages .card h4 {
+  font-size: 20px;
   padding-bottom: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: #003459;
+}
+
+.footer h1,
+a {
+  color: var(--mainTextColor);
 }
