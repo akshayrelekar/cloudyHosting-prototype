@@ -2,6 +2,7 @@
   --primaryColor: #00a8e8;
   --mainTextColor: #ffffff;
   --secondaryTextColor: #00171f;
+  --lightColor: #e4e4e4;
 }
 
 * {
@@ -43,6 +44,15 @@ p {
 
 img {
   width: 100%;
+}
+
+code,
+pre {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
 }
 
 /* Navbar */
@@ -205,9 +215,9 @@ p {
 }
 
 /* Features */
-.features-head img {
+.features-head img,
+.docs-head img {
   width: 200px;
-
   justify-self: end;
 }
 
@@ -262,6 +272,33 @@ p {
   grid-area: code;
 } */
 
+/* Docs */
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+.docs-main,
+.docs-main a,
+.docs-main p {
+  color: var(--secondaryTextColor);
+}
+
 /* Footer */
 .footer {
   background-color: #003459;
@@ -283,7 +320,10 @@ a {
   .showcase .grid,
   .stats .grid,
   .cli .grid,
-  .cloud .grid {
+  .cloud .grid,
+  .features-main .grid,
+  .docs-head .grid,
+  .docs-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -309,6 +349,23 @@ a {
 
   .cloud {
     margin-top: 0;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    margin: 0 auto;
+  }
+
+  .features-main .grid .server,
+  .features-main .grid .laptop {
+    grid-column: 1;
   }
 }
 /* Mobiles */
